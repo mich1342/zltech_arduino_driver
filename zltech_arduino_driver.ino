@@ -42,13 +42,3 @@ void loop() {
   Serial.print(driver_temp);
   Serial.println());
 }
-
-bool driver__set_velocity(int16_t value) {
-  delayMicroseconds(t3_5);
-  uint8_t result = driver_node.writeSingleRegister(ADDR_TARGET_VELOCITY, value);
-  bool ret = (result == driver_node.ku8MBSuccess);
-  if (!ret) {
-    Serial.println(result);
-  }
-  return ret;
-}
