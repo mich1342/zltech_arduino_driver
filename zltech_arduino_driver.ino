@@ -40,5 +40,5 @@ void loop() {
   Serial.print(motor_temp);
   Serial.print(";");
   Serial.print(driver_temp);
-  Serial.println());
+  Serial.println();
 }
